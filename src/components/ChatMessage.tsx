@@ -1,4 +1,4 @@
-import { Bot, User } from "lucide-react";
+import { User } from "lucide-react";
 
 interface ChatMessageProps {
   role: "user" | "assistant";
@@ -14,15 +14,17 @@ export const ChatMessage = ({ role, content }: ChatMessageProps) => {
         isUser ? "flex-row-reverse" : "flex-row"
       }`}
     >
-      <div
-        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full ${
-          isUser ? "bg-primary" : "bg-secondary"
-        }`}
-      >
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center">
         {isUser ? (
-          <User className="h-4 w-4 text-primary-foreground" />
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary">
+            <User className="h-4 w-4 text-primary-foreground" />
+          </div>
         ) : (
-          <Bot className="h-4 w-4 text-secondary-foreground" />
+          <img
+            src="/logo.png"
+            alt="Josh IA"
+            className="h-8 w-8 rounded-full object-cover"
+          />
         )}
       </div>
       <div

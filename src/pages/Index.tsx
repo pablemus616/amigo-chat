@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import { Bot } from "lucide-react";
 import { ChatMessage } from "@/components/ChatMessage";
 import { ChatInput } from "@/components/ChatInput";
 import { TypingIndicator } from "@/components/TypingIndicator";
@@ -18,11 +17,13 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-10 border-b border-border bg-card/80 backdrop-blur-sm">
         <div className="mx-auto flex max-w-3xl items-center gap-3 px-4 py-4">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-            <Bot className="h-5 w-5 text-primary-foreground" />
-          </div>
+          <img
+            src="/logo.png"
+            alt="Josh IA Logo"
+            className="h-10 w-10 rounded-full object-cover"
+          />
           <div>
-            <h1 className="text-lg font-semibold text-foreground">Asistente IA</h1>
+            <h1 className="text-lg font-semibold text-foreground">Josh IA</h1>
             <p className="text-sm text-muted-foreground">Siempre listo para ayudarte</p>
           </div>
         </div>
@@ -33,11 +34,13 @@ const Index = () => {
         <div className="mx-auto max-w-3xl px-4 py-6">
           {messages.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-20 text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary mb-4">
-                <Bot className="h-8 w-8 text-secondary-foreground" />
-              </div>
+              <img
+                src="/logo.png"
+                alt="Josh IA Logo"
+                className="h-16 w-16 rounded-full object-cover mb-4"
+              />
               <h2 className="text-xl font-semibold text-foreground mb-2">
-                ¡Hola! Soy tu asistente
+                ¡Hola! Soy Josh IA
               </h2>
               <p className="text-muted-foreground max-w-md">
                 Escribe un mensaje para comenzar la conversación. Estoy aquí para ayudarte con lo que necesites.

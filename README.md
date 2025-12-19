@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Josh IA - Tu Asistente Inteligente
 
 ## Project info
 

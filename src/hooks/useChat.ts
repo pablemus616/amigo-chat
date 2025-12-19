@@ -7,7 +7,7 @@ interface Message {
   content: string;
 }
 
-const API_URL = "https://internet.com:8000/messages";
+const API_URL = "https://chat-backend-wine-one.vercel.app/messages";
 
 export const useChat = () => {
   const [messages, setMessages] = useState<Message[]>([]);
